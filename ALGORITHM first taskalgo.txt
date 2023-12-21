@@ -1,0 +1,48 @@
+ALGORITHM first task
+VAR
+    def analyze_sentence(sentence):
+    word_count := 0
+    vowel_count = 0
+    vowels = "aeiouyAEIOUY"
+BEGIN
+    FOR i FROM 0 TO sentence.lenght-1 STEP 1  DO
+        for char in sentence:
+        if char =' ':
+        word_count += 1
+        else if char in vowels:
+        vowel_count += 1
+    END_FOR
+    word_count += 1
+    write ("Number of words: {word_count}")
+    write ("Number of vowels: {vowel_count}")
+END
+
+ALGORITHM second task
+VAR
+    tab1,tab2: ARRAY OF INTEGER;
+    n, n1, i, j: INTEGER;
+BEGIN
+    write ("put your tab length");
+    read(n);
+    write ("put your tab length");
+    read(n1);
+    FOR i FROM 0 to n step 1 do 
+        read (tab[i]);
+    END_FOR
+    FOR j FROM 0 to n1 step 1 do 
+        read (tab[j]);
+    END_FOR
+    FOR i FROM 0 to n-1 step 1 do
+        FOR j from 0 to n1-1 step 1 do
+            if tab(i) <> tab(j);
+            sum= sum + tab(i);
+        END_FOR
+    END_FOR
+    FOR j from 0 to n1-1 step 1 do
+        FOR i from 0 to n-1 step 1 do
+            if tab(j) <> tab(i);
+            sum = sum + tab(j);
+        END_FOR
+    END_FOR
+    write (sum);
+END
